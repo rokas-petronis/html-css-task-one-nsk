@@ -113,3 +113,4 @@ when pressing the text already written in some place on page.
 
 <a href="https://www.escoffier.edu/blog/baking-pastry/every-baker-should-have-these-8-skills/">Good baking</a>
 
+ended at creating links https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
