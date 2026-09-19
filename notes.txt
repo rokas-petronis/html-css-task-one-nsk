@@ -1,0 +1,115 @@
+Elements
+
+<p>*Text here is a paragraph<p> // a single main idea
+
+<h1>Text here is a heading<h1>  means a title
+
+its common practire to write tags in lower case, but they are case insensitive
+
+<em>Italic text<em> // For stressing emphasis 
+
+
+
+
+Nesting elements
+
+<p>Cat is <strong>very</strong> grumpy.</p> // strong is used for defining that the word very
+// is having a big importance.
+
+The good way to write nesting elements is to write the nested element opening and closing and only
+then write the closing of the first element.
+
+
+Void elements
+
+Elements consisting of a single tag are called void elements they are used fro embedding/inserting something
+in the document. They cant contain html content.
+
+for example:
+
+<p> Single paragraph, but now its going to break into two <br /> break it onto two lines <p>
+
+in some void elements there can be forwardslash <br />, but this is not needed can be <br>
+
+
+
+
+Attributes
+
+Elements can have attributes.
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
+
+Html(hypertext markup language) - is the code that is used to structure a webpage and its content.
+
+<li>text<li> this is used for bullet points
+
+<!doctype html> -required so document behaves correctly
+
+<html></html> - wraps all the content of the page, sometimes
+know as the root element. It can include lang attribute for language.
+
+
+<head></head> - for the part of html content that your page viewers wont see.
+Used for keywords and page description that will appear in search results.
+Css to style the content, character set and more.
+
+
+<meta charset="utf-8"/> - this is used to allow all kinds of symbols. For example
+so many languages could be written.
+
+<meta name="viewport" content="width=device-width"> - The viewport element is 
+used so that when viewing the page on a smaller device it wont render wider page
+than it should have to.
+
+<title></title> - The name of the page on your browser at the top higher than search
+bar.
+
+<body></body> - All the content that you want to show to page viewers.
+
+Most element consisting of opening tag and closing tag, but some can have inside thme
+attributes. Like lang, src.
+
+<img> - in this element the src attribute is used to put in the file path of image.
+and the alt attribute is for accessibility can specify what is the name of the image
+for blind people.
+
+<img> elements have no content and no closing tag so they are called empty or void elements
+
+
+Marking up text.
+
+Heading - for example a title of a book, chapter title.
+
+HTML has six levels of headings. But most of the time it will use 3-4 levels
+
+<h1>Main title</h1>
+<h2>Top heading</h2>
+<h3>Sub Heading</h3>
+<h4> Sub sub heading</h4>
+
+
+a comment in html is <!--comment -->
+
+
+Lists
+
+Most common lists in html are unordered list and ordered lists.
+
+unordered lists - lists where orders doest matter, for example a shopping list.
+They are wrapped in <ul> element.
+
+ordered lists - where order matters, list of numbers. used element <ol>
+
+each item of a list is put in a list item element <li>
+
+Creating links
+
+We need to use the element <a> to create links a- short for anchor.
+Links are what make a web a web.
+
+in the the opening tag create href attribute with a link to website you want to go to
+when pressing the text already written in some place on page.
+
+<a href="https://www.escoffier.edu/blog/baking-pastry/every-baker-should-have-these-8-skills/">Good baking</a>
+
