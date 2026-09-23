@@ -1,3 +1,26 @@
+﻿1. Suprantu
+
+Perskaičiau MDN ir galiu savais žodžiais paaiškinti.
+
+2. Galiu parašyti
+
+Užverčiu MDN ir pats parašau pavyzdį.
+
+3. Galiu panaudoti
+
+Gaunu užduotį:
+
+„Sukurk nuorodą, kuri nukelia į Kontaktų skyrių.“
+
+Ir pats parašau:
+
+<a href="#contact">Kontaktai</a>
+
+<h2 id="contact">Kontaktai</h2>
+
+Šitas trečias lygis yra pats svarbiausias.
+
+
 Elements
 
 <p>*Text here is a paragraph<p> // a single main idea
@@ -108,9 +131,108 @@ Creating links
 We need to use the element <a> to create links a- short for anchor.
 Links are what make a web a web.
 
-in the the opening tag create href attribute with a link to website you want to go to
-when pressing the text already written in some place on page.
+in the the opening tag create href attribute with a link to website you want to go to where when pressing the word in
+the middle of opening tag and closing tag
 
 <a href="https://www.escoffier.edu/blog/baking-pastry/every-baker-should-have-these-8-skills/">Good baking</a>
 
 ended at creating links https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
+
+Hyperlinks - are features of html when activated, or pressed go to a specific part of documents or resource.
+
+Every hyperlink has url that can link to a a specific site, document, image, etc.
+
+A link is created by writing a link in the opening tag of the element by adding the href attribute with the link
+<a> and in <a> When the word/link here gets clicked goes to the link</a>
+
+<a href = "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links">About creating links</a>
+
+A block element is a element that appears on a newline like <p> for paragraphs, <h1></h1> for headings.
+
+Even block elements can be made into a link 
+ <a href ="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links">
+        <h1>Fruit Gallery.</h1>
+ </a>
+
+U can create a image as a link by wrapping with it the <a> element.
+
+Title attribute can be added to links to write information about where does the link go.
+
+for example.
+
+<p>
+        I'm creatinga link to
+        <a href="https://www.mozilla.org/en-US/"
+            title = "Home website of firefow browser">
+            The firefox homepage.
+        </a>
+</p>
+
+in the attribute of opening tag of a element write the title attribute after href atrribute with space in between.
+
+
+A quick primer on URLs and paths
+
+When working locally on a website you will have one directory the entise site. Its the root of all things.
+
+In a real website the index.html stands for the homepage of the website.
+
+
+root directory - its where you place all your files, folder for the web project.
+
+For example.
+
+You create a folder on your pc where you are going to place all your content for web project.
+
+index.html - is the file where the content for the mainpage of the website will be.
+
+For example in the html part of the index.html file. All the content is going to be written.
+<!doctype html>
+
+<html>
+</html>
+
+Its possible to have multiple index.html files, but they need to be then in different 
+directories/folders.
+
+A landing page is a specific page on a website. That has a specific purpose in mind.
+
+For example.
+A call for action so people would unite to this charity.
+
+
+Linking in the same directory.
+
+You can link to a file in the same directory by just specifing the file name.
+
+<a href ="question-and-answer.html">QA link</a>
+
+Its also possible to use ./ for more clarity. Some people like it more. But they are both the same.
+
+For example it would look like this href="./question-and-answer.html"
+
+
+Moving down directories - its possible to go down the main directory subdirectory by specifying
+the the directory followed by a forward slash and the filename you want from the subfolder.
+
+For example:
+
+<a href="images/apelsinas.png">This is a link to a orange image</a>
+
+
+You can specify a link from one subdirectory to another subdirectory by going back to the root directory
+
+you do that by using the ../ before the subdirectory u want to link with the directoryname, and filename.
+
+for example.
+
+if you want to link in a landing-page/index.html filename a subdirectory of root folder 
+u go to root folder <a href="../images/bananas.png">Link to a banana page in a a subfolder of root directory</a>
+
+By using the links u can create a link from the landing page back to the homepage. Just need to use
+a forward slash before the name of the index.html if the mainpage index.html is in the root directory.
+
+ended at Linking relative to the root directory 
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com
+
