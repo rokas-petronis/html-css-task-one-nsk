@@ -236,3 +236,77 @@ ended at Linking relative to the root directory
 
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com
 
+Important to know that above the examples of linking work, but if the location of linked path
+changes/or the path where the linking is written, then its going to break.
+
+linking file - the file where you write your link to where you want to go trough url
+linked file - the file you go trough url.
+
+One of the problems can be solved. If you use a forward slash before writing the location
+of linked file, then the program knows that you are starting from the root directory. Then it
+does not matter if you move the linking file.
+
+But if you move the linked file it still breaks!
+
+Cant give an example because this forward slash technique only works when you have a web server.
+Not when just using filesystem locations. file/// etc.
+
+
+Absolute paths - are paths that link or have the same location in your root of the site.
+
+For example. You can do that with by starting from forward slash then the url.
+
+Relative paths - is the paths relative to the root of the document. So if your file linking 
+and linked file is in the same directory you would start the url from the name of the linked file.
+
+can use ../ to go up one directory level if linking file is in a sub directory and then can write
+the url of the linked file. that is in the root directory somewhere.
+
+Linking with full URLs
+
+Linking a full url on your website, just means that the url will always link to the same website.
+No matter where you website location is.
+
+<a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com#a_quick_primer_on_urls_and_paths">Link to mdn guide for creating links</a>
+
+Internal and external links.
+
+internal link - link to some place on your website.
+For example:
+<a href="images/apelsinas.png">This is a link to a orange image.</a>
+
+Its recommended to write internal links for portability as /foldername/filename
+as its better for portability.
+If written https://etc then if domain name is changed need to change, because the name changed.
+
+external link - link to some place on the web.
+
+For example:
+<a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com#a_quick_primer_on_urls_and_paths">Link to mdn guide for creating links</a>
+
+Document fragments
+
+Its possible to link to a specific part of html document by using the attribute id.
+
+Its most common used is to link to a specific heading. 
+Very useful so the link doesnt make you just go to the top of the page, but a part of it.
+
+For example:
+<h2 id="mailing-adress">Mailing adress:</h2>
+<p>123@gmail.com</p>
+
+And then you use it in the link by specifing the document name # and id
+
+<a href="landing-page/index.html#mailing-adress">Link to the mailing adress.</a>
+
+You can even use this to go specific part of a page without going to a next page.
+
+The default homepage index.html
+
+On default when making a website run it autommatically looks for the default homepage index.html
+
+So you dont actually need to specify like in the example projects/index.html. And could just be
+projects. Because it looks up automatically the homepage.
+
+ended at Link best practices https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com#internal_and_external_links
+
