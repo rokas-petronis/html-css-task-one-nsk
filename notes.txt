@@ -310,3 +310,60 @@ projects. Because it looks up automatically the homepage.
 
 ended at Link best practices https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?#internal_and_external_links
 
+
+Good linking is having good descriptions for links.
+For example:
+<a href="https://www.firefox.com/en-US/">Download firefox.</a>
+
+Bad example:
+<a href="https://www.firefox.com/en-US/">Click here to download firefox.</a>
+
+1.Minimize the links with the same description going to different places. This is confusing.
+
+2.Don't Write links to, linking, etc. This is noise. Screen reader already knows that this is a link.
+
+3.Don't write urls as part of description.
+
+4.Keep description as short as possible, but understandable.
+
+When linking to non-html resources(pages, parts of the document) write and extra word to describe it.
+
+For example:
+<a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?#link_best_practices">MDN website</a>
+The website gives a description that you are going to a new place out  of your website.
+And for example if you have pdf, right now i dont. Need to say: download something(PDF, 10MB).
+For people that have slow internet.
+
+Can use the download attribute for downloadable item from links for default name.
+
+For example:
+
+<a href="../task-1.pdf" download="task-01.pdf">Download the task instructions (PDF, 300KB)</a>
+
+Wheter to open a link in a new tab or not.
+
+Common approach is to open external links in a new tab, and internal links in the same tab.
+
+If you are opening a link in a new tab its good practice to place and icon in the description so 
+the screen reader would know that a new tab opened.
+
+Opening a new tab can be done by using the target attribute and in it the quotes writing _blank
+
+For example:
+
+<a href="../task-1.pdf" download="task-01.pdf" target="_blank"> >>> Download the task instructions (PDF, 300KB)</a>
+
+Email links
+Its possible to open a link to send an email.
+
+That is done possible by using the mailto: url scheme in the href attribute.
+For example:
+
+<a href="mailto:nowhere@bail.com">Send an email to nowhere</a>
+
+Another way of using thing can be by omitting the email and then the recipient can be chosen who you
+want to send to.
+
+<a href="mailto:">Send an email to somebody of your choosing</a>
+
+Did creating links ended at https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
