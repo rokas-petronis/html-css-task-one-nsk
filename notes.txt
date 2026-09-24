@@ -308,5 +308,5 @@ On default when making a website run it autommatically looks for the default hom
 So you dont actually need to specify like in the example projects/index.html. And could just be
 projects. Because it looks up automatically the homepage.
 
-ended at Link best practices https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?utm_source=chatgpt.com#internal_and_external_links
+ended at Link best practices https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links?#internal_and_external_links
 
