@@ -367,3 +367,179 @@ want to send to.
 <a href="mailto:">Send an email to somebody of your choosing</a>
 
 Did creating links ended at https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
+
+
+What is a table?
+
+A table that is made up of data in rows and columns.
+
+A table lets you find values that have a connection with each other.
+
+For example:
+Person name & age.
+
+When tables are created well, screen reader should be able to read it correctly.
+
+Tables are used for data that is easy to work in rows and columns.
+
+Its bad practice to use tables for headers, contents. Earlier it was used becaause css styling was not
+accessible to use.
+
+Tables layout generally produce more complex code that is harder to maintain. 
+
+Its bad for the screen reader to read.
+
+Tables are not automatically responsive to smaller/ bigger devices. they dont resize.
+Like other elements do.
+
+Every table is encloses with tags <table></table>
+
+The smallest container inside a table is called a table cell.
+Its created by using the  element <td></td> (short for table data)
+
+If we want a couple of cells in a row of table data, then just need to copy paste acouple td elements.
+For example:
+
+<td></td>
+<td></td>
+<td></td>
+This be a row of three cells that are aligned to each other.
+
+To create a new row of cells need to use the tr element <tr></tr> as a wrapper around the cells of the row
+For example: this is a row of three cells
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+You can use th element to create table header
+For example
+There is people names and ages so it would be more understable at the beggining
+write table headers with word age and another with name
+
+For example:
+
+<table>
+        <tr>
+            <th>Name</th>
+            <td>John.</td>
+            <td>Jack.</td>
+        </tr>
+            <th>Age</th>
+            <td>20</td>
+            <td>40</td>
+        <tr>
+    </table>
+
+Table headers are good, because you understand what data you are looking for, and screen readers
+can read out whole rows or columns of cells because of table headers
+
+Its possible to make a cell span two or more rows with rowspan="number" and column span with colspan="number"
+This is useful if lets say we want a word to be on a couple of rows/columns like the merge function
+in excel.
+
+Grouping columns with <colgroup> and <col>
+
+There is a way to affect the whole column as a group to make a style change for tha column.
+Or a couple of columns.
+
+That is done with <colgroup> and <col> elements
+
+The colgroup element is written after the opening tag of table element.
+
+In the colgroup element the col element is written and the col ement can have the span attribute. For
+how much of columns are affected.
+
+CSS(Cascading Style Sheets)
+
+Css can be used for styling, animation, colors of text, layouts of grids.
+
+In css you write rules for specific elements or group of elements.
+
+for example: Want to change the main heading text to color red.
+
+h1 {
+    color: red;
+}
+
+Get used to searching on the engine for mdn css-feature-name, because its not possible to learn them all.
+
+
+
+
+External stylesheets.
+
+An external stylesheet is a seperate file with extension .css it can be used on multiple webpages.
+
+To access the rules of the .css file, you need to link it with the element link in the head part of the
+html document. And using the rel attribute to tell the browser we have stylesheet. 
+And the href attribute for the location. 
+
+The link element does not have opening tag.
+
+For example:
+
+<link rel="stylesheet" href="style.css"/>
+
+
+
+Internal stylesheets.
+
+They are created using the style element somewhere in head.
+
+<style>
+p{
+    color: purple;
+}
+</style
+
+This can be useful if you are working with a project where you dont have access to .css files.
+
+But its not portable to make the internal stylesheets for multiple webpages. Because every change
+need to made in other pages.
+
+Inline styles.
+
+Its possible to change how text looks by changes the color inside the opening tag of the element.
+
+<p style="color:red; font-weight: bold">This is inline style</p>
+
+This is bad practice, because this is the least efficient way of appling css. Only use it if the
+restrictive enviroment does not let other ways of changing style.
+
+Its bad for maintability need to change trough multiple webpages multiple things, bad for reading and 
+understanding.
+
+
+Using common selectors
+
+You can target multiple elements/selector in your html file by using comma in you .css file
+
+For example:
+
+p,li
+{
+    color: yellow;
+}
+
+Targers all paragraphs, and lists 
+
+
+
+Adding a class.
+
+Its possible to targer specific elements without their default tags, but by special identifiers.
+
+One such way is using in the element the class attribute and specifying a name.
+
+Then in the .css file you can use the name starting with a dot to target those elements.
+
+For example:
+
+<p class="special">This is a class targeting element.</p>
+
+
+
+Styling things based on their location in a document
+
