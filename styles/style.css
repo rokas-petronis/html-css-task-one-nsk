@@ -1,8 +1,97 @@
-h1,p {
-    color: green;
+body{
+    font-family: sans-serif;
+    background-color: white;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+@media (width <=50em) { /*When a browser resizes and the width get small enough the background becomes blue*/
+    body {
+        background-color: blue;
+    }
+}
+
+h1, p {
+    color: tomato;
+    padding: 10px, 10px, 5px, 10px;
 }
 
 .special
 {
     color: gold;
 }
+
+li em
+{
+    color: cyan;
+}
+
+h1 + p {
+    font-size: 200%;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none; /*This is done by changing the underline of text*/
+}
+
+li a strong {
+    color: grey;
+}
+
+.outer{
+    border: 5px solid black;
+}
+
+.loading-bar {
+    padding: 10px; /*How far is the border from the text from all sides.*/
+    width: calc(90% - 30px); /*How wide is the inside of the box but only is seeable if background color is not white*/
+    background-color: rebeccapurple;
+    color: blue;
+}
+
+.cube {
+    margin: 30px;
+    background-color: purple;
+    width: 30px;
+    height: 20px;
+    transform: rotate(0.6turn); /*Rotates by an angle the content*/
+}
+
+.image
+{
+    margin:30px;
+    width:100px;
+    height:100px;
+}
+
+.box {
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding: 40px;
+    margin: 40px;
+    width: 300px;
+    height: 150px;
+}
+
+.box span {
+    background-color: pink;
+    border: 5px solid black;
+    padding: 5px;
+    display: inline-block; /*Push margin , and padding ,border so it would not go to on the text */
+}
+
+    
+
+.alternate {
+    box-sizing: border-box;
+    width: 390px;
+}
+

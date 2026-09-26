@@ -543,3 +543,233 @@ For example:
 
 Styling things based on their location in a document
 
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#styling_things_based_on_their_location_in_a_document
+
+Sometimes you will want to style something based on the location where it it.
+
+That is possible to do with descendant selector  can write in cs file.
+
+
+
+For example if we have a em element in a li element
+
+li em{
+    color: black;
+}
+
+You can style the next element after h1 in this example, but they both need to be in the same
+hierachy. If for example the h1 is nested in some element the p has to be nested too.
+
+h1 + p {
+    font-size: 200%;
+}
+
+
+
+Styling things based on state
+
+Its possbile to style links by the state they are in.
+Not clicked, clicked, being hovered on etc. all these states can be styled by using css.
+
+For example:
+If you want a to change a how a link not pressed looks like then write.
+
+a:link{
+    color: pink;
+}
+
+and if visited
+
+a:visited
+{
+    color: green;
+}
+
+You can change how a link looks like when its hovered.
+
+a:hover{
+    text-decoration: none; /*This is done by changing the underline of text*/
+}
+
+
+
+
+Combining selectors and combinators 
+
+Its possible to combine multiple specifications to go to a specific part of document that you
+want to change with css
+
+for example
+
+li a strong
+{
+    color: grey;
+}
+
+It possible to do it with 
+
+the the + selector for if and then using
+
+h1 p .special - targets in a paragraph an element with class that has name special.
+
+
+Changing the text font.
+
+You can change the font of the text by using the font-family
+
+There are some default ones like Times new roman, Arial.
+
+For example if you wan to change all the body font to one:
+
+body{
+    font-family: Times new roman;
+}
+
+
+<div></div> is a generic html element that is used as a container for a couple of element to 
+change with css as a group by using the class attribute.
+
+div elements can be nested in div elements for example.
+
+<div class="outer"><div class="box">The box is 90% full - 30px.</div></div>
+
+This makes it so trough where the text is around it a border of black line goes around and untill page
+sides. if increase the pixel then the thickness of the border line increases.
+.outer{
+    border: 5x solid black;
+}
+
+.box{
+    padding: 10px; /*How far is the border from the text from all sides.*/
+    width: calc(90% - 30px) /*How wide is the inside of the box but only is seeable if background color is not white*/
+    background-color: purple; - changes the background of the box inside makes the percentage of wide be seeable on white screen.
+}
+
+in css properties are color, font-size etc. selectors are what you modify their names.
+
+and the options in the of the properties are values.
+
+So calc() in width: calc(need percentage and -pixels) is called a function that is useable by some properties.
+
+background-color: color - property that changes the color of the page.
+
+<div class = "cube"></div>
+
+in css file
+
+.cube{
+    margin: 30px; /*Margin creates space around the element if only one value is specified then on all sides gives space around the element by that value*/
+    background-color: purple;
+    width: 30px; /*Sets the horizontal size left to right of content */
+    height: 30px; /*Sets the height*/
+    transform: rotate(0.8turn); /*Rotates by an angle the content*/
+}
+
+
+@rules about media queries
+
+@media - rule that is used for creating media queries its used for conditional logic.
+
+for example:
+
+body{
+     background-color: red;
+}
+
+@media (width>30em){ /*When a browser resizes and the width get small enough the background becomes blue*/
+ body{
+    background-color: blue;
+ }
+}
+
+
+
+
+Shorthand properties
+
+When applying a shorthand property like margin or font with four numbers the order is clockwise
+
+margin: 10px 15 px 5px 10px  can do the same with padding.
+
+Top,right,bottom,left
+
+padding gives space all around the sides of the element specified.
+
+
+GOOD example:
+
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
+
+is the same as
+
+background-color: red;
+background-image: url("bg-graphic.png");
+background-position: 10px 10px;
+background-repeat: repeat-x;
+background-attachment: fixed;
+
+
+
+Introduction to the CSS box model
+
+When rendering a document the css think about every element as rectanglar box.
+And the css lets you change the size, layout, color of the box.
+
+Every box is made of four edge : margin edge, border edge, padding edge, content edge.
+
+
+
+
+Content area.
+
+Where the content is: text, image, media player. Most of the time it has background color.
+
+Its area is changed trough content-area width and height.
+
+if the box-sizing property is set to context-box the default.
+Then the changes can be made with width,heigh, width-max,min, heigh-max, min properties.
+
+Padding area
+
+Can be changed with the padding property its the space around the element.
+
+
+
+
+Border area:
+
+if the box-sizing property is using the border-box. Then can use 
+
+Then the changes can be made with width,heigh, width-max,min, heigh-max, min properties.
+
+And the background-color it extend to the end of the outer edge.
+
+
+
+Margin area:
+
+Is used to to give space for the element from other elements.
+
+the changes are made with margin property.
+
+the span element doesnt mean anything on its own but can be useful for the class attributes
+to change a specific part.
+
+display: inline-block; makes it so in css the box wont be on other boxes by pushing margin,
+padding,border
+
+The layout of the document has  default normal flow -means a way to read a document.
+
+margin collapsing happens because its the same as when printing document there is not two spaces
+between content but one so if both have spaces around the bigger space gets collapses
+
+margin: 0 auto used for centering an element horizontally.
+
+display values block, inline, inline-block can change how an element works does it start on a newline
+or not.
+
+position property allow you to control the position of elements precisely
+
+responsive web desing - is the act of making a website adapt to different screens , pc , smarphone,
+tables. @media lets you create media queries and specify on what resolution do what.
+
