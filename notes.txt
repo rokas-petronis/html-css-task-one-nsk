@@ -773,3 +773,41 @@ position property allow you to control the position of elements precisely
 responsive web desing - is the act of making a website adapt to different screens , pc , smarphone,
 tables. @media lets you create media queries and specify on what resolution do what.
 
+
+
+
+Flexbox
+
+Its a way to organize items into columns and rows one dimensionally by flexing them.
+Expanding or shrinking so the items would fit.
+
+
+
+Why flexbox?
+
+content block of a block can perfectyle centered vertically.
+All the content childs can take up the same width and height. even if there is more.
+All columns take up the same height position  in a multiple column layout even if the some of items content is bigger.
+
+most of the time before a section should be a header.
+
+<section></section> when you want to make a section about something specific.
+Like talking about the projects you did, that why not using the div element.
+
+<article></article> when writing about a description of something, lets say you like games.
+
+From my understanding you are using these elements for more descriptory purposes for the screen
+reader to know, because you could just use div.
+
+<header></header> used for the banner of the website.
+
+<nav></nav> where you hold the links for the navigation part trough the pages.
+
+css property  zoom: 0.0; /*makes an element take more space and push down other elements*/
+               /*Makes an element invisible with 0.0 value*/
+
+
+
+Specifying what elements to lay out as flexible boxes ended 
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#specifying_what_elements_to_lay_out_as_flexible_boxes
+

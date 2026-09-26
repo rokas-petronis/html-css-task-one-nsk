@@ -1,0 +1,27 @@
+body{
+    font-family: Times New Roman;
+    margin: 0; /*Remove all the margin make it so there are none*/
+}
+
+header {
+    background: purple;
+    height: 100px;
+}
+
+h1{
+    text-align: center; /*in the centre text of the box*/
+    color: white;
+    line-height: 100px; /*Vertical spaces between lines where the text lines for exmp are bigger*/
+    margin: 0;
+}
+
+section{
+    zoom: 0.0; /*makes an element take more space and push down other elements*/
+               /*Makes an element invisible with 0.0 value*/
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+}
