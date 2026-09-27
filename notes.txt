@@ -811,3 +811,17 @@ css property  zoom: 0.0; /*makes an element take more space and push down other 
 Specifying what elements to lay out as flexible boxes ended 
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#specifying_what_elements_to_lay_out_as_flexible_boxes
 
+type attribute in link element tells the browser that this an external stylesheet.
+
+First need to think which boxes of content we want to do as flexible boxes.
+
+For example if u want to change the layout of article in the section of flexbox 
+then in the css file where the css is need to use the display property with a value flex;
+
+That causes the section element to be a flex container and the items in the section the flex items.
+
+And this give us multiple column layout with equl sized columnd and the same height.
+
+display: inline-flex makes the flex container display inline.
+
+ended at the start of flex image https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#specifying_what_elements_to_lay_out_as_flexible_boxes
