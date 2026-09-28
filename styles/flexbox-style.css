@@ -19,6 +19,8 @@ section{
     zoom: 0.0; /*makes an element take more space and push down other elements*/
                /*Makes an element invisible with 0.0 value*/
     display: flex ; /*Makes it so the section becomes a flex container and the items flex items*/
+    flex-wrap: wrap;
+    flex: 1;
 }
 
 .image
@@ -31,4 +33,46 @@ article {
     padding: 10px;
     margin: 10px;
     background: aqua;
+    flex: 1 100px;
 }
+
+article:nth-of-type(3){
+    flex: 2 100px;
+    
+}
+
+body .axis {
+
+    font-family: sans-serif;
+    width: 90%;
+    max-width: 960px;
+    margin: 10px auto;
+}
+
+.axis{
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+    
+}
+
+button:first-child{
+    order: 1;
+}
+
+/*button:first-child{
+    align-self: flex-end;
+}
+*/
+

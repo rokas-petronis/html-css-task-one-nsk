@@ -658,7 +658,7 @@ background-color: color - property that changes the color of the page.
 in css file
 
 .cube{
-    margin: 30px; /*Margin creates space around the element if only one value is specified then on all sides gives space around the element by that value*/
+  : 30px; /*Margin creates space around the element if only one value is specified then on all sides gives space around the element by that value*/
     background-color: purple;
     width: 30px; /*Sets the horizontal size left to right of content */
     height: 30px; /*Sets the height*/
@@ -763,7 +763,7 @@ The layout of the document has  default normal flow -means a way to read a docum
 margin collapsing happens because its the same as when printing document there is not two spaces
 between content but one so if both have spaces around the bigger space gets collapses
 
-margin: 0 auto used for centering an element horizontally.
+margin: 0  used for centering an element horizontally.
 
 display values block, inline, inline-block can change how an element works does it start on a newline
 or not.
@@ -824,4 +824,300 @@ And this give us multiple column layout with equl sized columnd and the same hei
 
 display: inline-flex makes the flex container display inline.
 
-ended at the start of flex image https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#specifying_what_elements_to_lay_out_as_flexible_boxes
+ended at the start of flex model https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#specifying_what_elements_to_lay_out_as_flexible_boxes
+
+
+The flex model
+
+the main axis is  the direction that the flex ites are layouded. for example rows vertically
+columns horizontally
+
+the starting points of the main axis is called the main start and the main end.
+
+the flex item size layout in the main axis direction is called the main size.
+
+the cross axis is the 90 degree angle as a line to flex items layout.
+
+The start and end points of cross axis are called cross start and cross end.
+
+the lenght of the flex item along the cross axis is called cross size.
+
+the element that has the display:flex applied is called the flex container.
+
+in the flex container the elements are called flex items.
+
+
+
+Columns or rows?
+
+the default direction of your flex item is left to right or like rows.
+
+its possible to change with flex-direction: column; the direction of the items to go vertically.
+
+flex-direction: row-reverse; changes where items start from start from right to left.
+flex-direction: column-reverse; reverses the columns positions.
+
+
+
+Wrapping
+
+The issue with fixed width and height is that the flex item content will overflow their container.
+it will go out of bounds of the content specified.
+
+For example: need to scroll to the side to see the full items, because their width is bigger.
+than the screen size
+
+a way to solve this is by appling a flex-wrap: wrap; in the css file for the container.
+
+flex-flow shorthand.
+
+there is a shorthand for flex-direction: row, and flex-wrap: wrap;
+
+its flex-flox: row wrap; when using shorthand not commas.
+
+
+
+Flexible sizing of flex items.
+
+its possible to control how much space flex items get.
+
+by using flex:1; you are giving the same amount of space to each item. after padding, margin.
+if you use this in the flex container.
+
+but you can specify the flex item by writing a new rule and then giving that element more space.
+by taking from other elements.
+
+article:nth-of-type(3){
+    flex: 2;
+}
+
+This will give two times more space than the other elements,
+so all the items px are added together and the specified one give two times more than the others.
+
+if we use on the flex items flex: 1 100px; we are giving on default 100 px to the flex items.
+
+then on the article nth-of-type(3) flex: 2 100px;
+
+so each article gets 100 px and then the rest of space is appropriated by the units specified 
+the 3 article gets 2 more times more than the first two in this example of flexbox-test.html
+
+the real benefix of flexbox is responsivess if you make a new element in the flex container or resize
+the browser it still works.
+
+dont use flex longhand properties. just use flex shorthand properties , because there will 
+a lot of unnecessary code and can be confusing.
+
+
+
+Horizontal and vertical alignment
+
+its possible to align the flex items along the main axis and the cross axis.
+
+width value percantage is how wide trough the whole screen is block of content
+
+
+margin: auto splits the space equaly for its element
+
+align-items: center make the flex items centered right in the middle of the cross axis. vertical.
+
+
+justify-content: space-around; on the main axis the flex items are spaced evenly.
+
+its possible to alighn items at the positons of the cross axis. by using flex-start, flex-end;
+
+you can override the allign-items behavior
+
+by using on a single flex item.
+
+button:first-child{
+    align-self: flex-end;
+}
+
+there is space-between value that doesnt leave any space between boder and flex items
+
+button:first-child{
+    order:1
+}
+
+flex items which order is bigger appears later in the layout.
+
+its possible to write this with negavive values for last item to appear as the first one.
+
+
+
+Nested flex boxes.
+
+Its fine and possible to make a flex item into another flex container.
+
+gap gives more space to each flex item.
+
+/*position: absolute; removes the content from the default flow*/
+    /*top: 0px; */
+    /*transform: translate(100px); moves by x and y positions */
+
+
+
+Css grid layout
+
+two dimensional layout in the webs for rows and columns.
+
+
+What is grid layout?
+a grid is colletion of horizontal and vertical lines that create a pattern that we can use
+to line up the elements    
+
+a grid will typically have gaps between rows and columns they are called gutters.
+
+
+
+Creating your grid in CSS
+
+Defining a grid
+
+selector combinator > selects all the elements in the element but not the child element elements.
+
+css propery border-radius round the corners of the block element.
+
+similar how with flex you make the flex container and flex item with display: flex;
+
+u do the same with grid display:grid; but unlike how with flex nothing will change from the get go.
+
+gride-template-columns makes it so the items would get rearrenged into a cells one cell one item.
+
+
+
+
+Flexible grids with the fr unit
+
+its possible to create grids with the fr unit.
+
+fr unit represent one fraction of a unit in a grid to flexibly size rows and columns.
+
+grid-template-columns: 1fr, 1fr, 1fr;
+
+it makes so it takes up enough space to fill up the sreen. ant giving bigger value to one 
+item makes that one get more space.
+
+the fr distributes the available space.
+
+gap - creates space around the items.
+
+the function repeat lets you repeat how many times you want the listing to repeat.
+first value how many columns and the second what size.
+
+grid-template-columns: repeat(3, 1fr);
+
+
+
+Implicit and explicit grids
+
+explicit grid are grid create with grid-template-columns, grid-template-rows.
+
+implicit grids: extend the implicit grid when the content is placed outside of the grid.
+by drawing more grid lines .
+
+content created in implicit grid on default is auto-sized, that means they are large enough to hold
+their content.
+
+its possible to change their auto sizing by using grid-auto-rows and grid-auto-columns.
+
+if you add grid-auto-rows: 100px; its not really 100 pixels tall.
+
+
+The minmax() function
+
+the 100 tall pixel rows are not really useful if their content is larger than the rows. So its better
+to have rows that are atleast 100 pixels tall but can expand.
+
+minmax() - lets you say how much pixels is on default and then can give another value that is auto.
+That will automatically make it bigger if there is more content.
+
+grid-auto-rows: minmax(50px, auto); now if extra content is added it expands.
+
+
+
+As many columns as will fit
+
+Sometimes its useful to create as many columns as the contatiner can hold.
+That is possible by using the minmax, repeat and auto-fix.
+
+grid-template-columns: repeat(auto-fix, minmax(230px, 1fr));
+
+really useful for solving a lot of resposive desing problems.
+
+so repeat takes auto-fix as a value and that repeats untill the container is full, by the specified
+minmax values 230px is default, and the largest is 1fr which just takes all the space and evenly dis
+tributes to all the boxes.
+
+
+
+
+Positioning with grid-template-areas
+
+alternative-way to design your grid items is by giving them names.
+
+using grid-template-areas
+
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+
+    and this basically visualy lets you make a layout of your page
+
+    the first row is header
+    the left side is sidebar then right is content
+    etc.
+
+and then in the header selector write 
+header{
+    grid-area: header;
+}
+
+the rules are:
+
+for and element to span two cells repeat the name two times.
+
+need to fill every cell of grid.
+
+to leave empty use .
+
+aread must be rectangular rectangle. cant be l-shaped.
+
+areas cant repeat in diff locations.
+
+mobile-first-design first creating single simple column layou for naroow screen devices. then check
+for bigger screen. and then implement multiple column layout when a screen is big enough.
+
+its better to use rem, em not absolute units like pixels when creating responsive design.
+
+Media queries can help with RWD, but are not a requirement.
+
+flexible grids, min, max values can be used wihout media queries.
+
+to ensure media is not larger than the container. its possible to make it
+
+img,picture,video
+{
+    max-width: 100%;
+}
+
+images can look bad if they are scaled down to a smaller size when they are really big.
+
+media queries example:
+
+for example we first have h1: 2rem; but we want to change it to bigger size
+when its on a bigger screen.
+
+@media (min-width: 1200px) css3 standart write like this.
+{
+ h1
+ {
+    font-size: 4rem;
+ }
+}
+
+dont use vw units alone because the user cant zoom in text by himself.
+
+viewport is needed because smaller devices tend to lied about their width.
+

@@ -1,0 +1,50 @@
+.container > div {
+    border-radius: 5px; /*round the corners of the box*/
+    padding: 10px;
+    background-color: rgb(207 232 220);
+    border: 2px solid rgb(79 185 227);
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fix, minmax(230px, 1fr));
+    gap: 20px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.connor {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+}
+
+header,
+footer {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header{
+    grid-area: header;
+}
+
+main {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}

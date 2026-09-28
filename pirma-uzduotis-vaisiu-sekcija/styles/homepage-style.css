@@ -1,0 +1,42 @@
+﻿body {
+    font-family: Times New Roman;
+    background-color: rgb(94, 122, 74);
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 5em;
+    margin:0;
+}
+
+.container > div {
+    padding: 10px;
+    background-color: RGB(235, 255, 220);
+    border: 2px solid rgb(0 0 0);
+    font-size: 5em;
+    margin:0;
+   
+        
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+@media (min-width: 1200px)
+{
+    .container  p{
+        font-size: 7em;
+    }
+
+    .container > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
