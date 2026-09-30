@@ -2,7 +2,7 @@ body {
     font-family: Times New Roman;
     margin: 0;
     background-color: rgb(235, 255, 220);
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 .container {
@@ -38,4 +38,7 @@ article p{
    .image-holder{
        width: 30em; /*so it would look nicer on big screens for the user to look*/
    }
+    body {
+        padding: 0px 10em;
+    }
 }
