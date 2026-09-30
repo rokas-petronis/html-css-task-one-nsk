@@ -1,0 +1,30 @@
+for content
+html, css,javascript
+
+for servers
+c#
+
+for request use <forms>, atrributes main action="url", method="Get" and post for post 
+you have to provide a body.
+
+the task
+do forms with accesibility like alt, label.
+
+Grading:
+
+For exesices on freecodecamp all exercises is 30%, 10% for crud project data unknow.
+And examination 60 %
+
+Examination is code on paper with some theoretial questions.
+
+need to untill everything with html review
+
+Second lecture:
+
+now done html and starting css
+
+specificity rules
+
+* ->tag->class->id the last one applies if conflicgting rules.
+
+do computers  and after basic css.
