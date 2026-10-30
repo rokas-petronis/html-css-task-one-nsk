@@ -378,3 +378,5 @@ FodyWeavers.xsd
 
 # Test coverage
 /coverage
+
+extra-info
