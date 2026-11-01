@@ -2,11 +2,8 @@
   "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "src",
-    "module": "NodeNext",
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM"]
+    "rootDir": "./src"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["public", "dist", "node_modules"]
+  "exclude": ["dist"]
 }

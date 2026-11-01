@@ -3,45 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="./fruit.css" />
-    <script type="module" src="/ui.js"></script>
+    <link rel="stylesheet" href="fruit.css" />
+
     <title>Calculator</title>
   </head>
   <body>
-    <input id="display" readonly />
-
-    <div id="buttons">
-      <button style="grid-area: sq" data-action="sq">√</button>
-      <button style="grid-area: multi" id="*" data-value="*">*</button>
-      <button style="grid-area: minus" id="-" data-value="-">-</button>
-      <button style="grid-area: clear" data-action="clear">C</button>
-
-      <button style="grid-area: n7" id="7" data-value="7">7</button>
-      <button style="grid-area: n8" id="8" data-value="8">8</button>
-      <button style="grid-area: n9" id="9" data-value="9">9</button>
-      <button style="grid-area: divide" id="/" data-value="/">/</button>
-      <button style="grid-area: percent" data-value="%">%</button>
-
-      <button style="grid-area: n4" id="4" data-value="4">4</button>
-      <button style="grid-area: n5" id="5" data-value="5">5</button>
-      <button style="grid-area: n6" id="6" data-value="6">6</button>
-      <button style="grid-area: c" id="c" data-action="c">cube</button>
-
-      <button style="grid-area: n1" id="1" data-value="1">1</button>
-      <button style="grid-area: n2" id="2" data-value="2">2</button>
-      <button style="grid-area: n3" id="3" data-value="3">3</button>
-      <button style="grid-area: s" id="s" data-action="s">square</button>
-
-      <button style="grid-area: plus" data-value="+">+</button>
-      <button style="grid-area: n0" data-value="0">0</button>
-      <button style="grid-area: carat" data-value="^">^</button>
-      <button style="grid-area: a"></button>
-      <button style="grid-area: b"></button>
-      <button style="grid-area: e"></button>
-      <button style="grid-area: d"></button>
-      <button id="equal" style="grid-area: equals" data-action="equals">
-        =
-      </button>
-    </div>
+    <button data-value="1">1</button>
+    <button data-value="+">+</button>
+    <button data-value="2">2</button>
+    <button data-action="equals">=</button>
+    <button data-action="clear">C</button>
+    <button data-value="√">√</button>
+    <button data-value="²">²</button>
   </body>
 </html>

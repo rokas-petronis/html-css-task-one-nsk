@@ -1,18 +1,12 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// index.js
+//import { middleware } from "#middlewares/middlewares.js";
 const app = express();
-const port = process.env.PORT ?? "3000";
+const port = process.env.PORT ?? "9001";
 
-app.use(express.static(path.join(__dirname, "..", "public")));
-
-app.use(express.static(__dirname));
-
+//app.get("/", middleware);
+app.use(express.static("public"));
 app.listen(port, () => {
-  console.log(path.join(__dirname, "..", "public"));
-  console.log(`Server running at http://localhost:${port}/calculator.html`);
+  console.log(`Example app listening on port ${port}`);
 });
