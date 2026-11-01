@@ -1,15 +1,28 @@
-export function calculate(expr: string): number {
-  const match = /^(\d+)([+\-*/^])(\d+)$/.exec(expr);
+export function calculate(userInput: string): string {
+  const match = /^(\d+)([+\-*/^])(\d+)$/.exec(userInput);
   if (!match) throw new Error("Not found value");
   const [, a, op, b] = match;
-  return applyOperator(Number(a), Number(b), op);
+
+  if (b === "0" && op === "/") {
+    return "Cannot divide by zero";
+  } else {
+    return applyOperator(Number(a), Number(b), op);
+  }
 }
 
-function applyOperator(a: number, b: number, op: string): number {
+function applyOperator(a: number, b: number, op: string): string {
   switch (op) {
-    case "+":
-      return a + b;
+    case "*":
+      return String(a * b);
 
+    case "+":
+      return String(a + b);
+
+    case "-":
+      return String(a - b);
+
+    case "/":
+      return String(a / b);
     default:
       throw new Error(`Unknown operator: ${op}`);
   }
