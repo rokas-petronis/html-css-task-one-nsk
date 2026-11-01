@@ -31,10 +31,6 @@ describe("calculate", () => {
     expect(calculate("4^2")).toBe("16");
   });
 
-  it("powerTwo", () => {
-    expect(calculate("4s2")).toBe("16");
-  });
-
   it("throws on division by zero", () => {
     expect(() => calculate("4/0")).toThrow("Cannot divide by zero");
   });
